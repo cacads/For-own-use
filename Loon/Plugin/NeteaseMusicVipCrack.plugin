@@ -1,0 +1,16 @@
+#!name = 网易云音乐解锁黑胶会员
+#!desc = 解锁部分黑胶会员权限
+#!openUrl = 
+#!author = Keywos
+#!homepage = https://t.me/yqc_123/2413
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/NeteaseCloudMusic.png
+
+[Rewrite]
+^https?:\/\/.*\/api\/clientlog\/encrypt\/upload reject-array
+^https?:\/\/.*\/eapi\/ad\/.+ reject-array
+
+[Script]
+http-request ^https?:\/\/.*\/eapi\/(music|s(ong|ingle|earch)|album|link|zone|content|p(laylist|rivilege|laymode|urchased)|r(esni|nca)che|vip(auth|pro|(new)?center)|music-vip-membership).+ script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/NeteaseMusicVipCrack.js, requires-body=false, timeout=10, tag=NeteaseMusicVipCrack
+
+[MITM]
+hostname = *music.163.com, 115.236.121.4, 115.236.118.34, 115.238.119.68, 183.136.182.19
