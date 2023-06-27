@@ -1,0 +1,8 @@
+#!name=Pixiv
+#!desc=Pixiv
+
+[Script]
+http-response ^https://oauth.secure.pixiv.net/auth/token  script-path=https://raw.githubusercontent.com/SukkaW/Surge/master/Script/pixiv_premium.js, requires-body=true, timeout=10, tag=pixiv_premium
+
+[MITM]
+hostname = oauth.secure.pixiv.net
