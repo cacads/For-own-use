@@ -1,0 +1,12 @@
+#!name=VideoFusionVipCrack
+#!desc=剪映解锁会员
+#!openUrl = 
+#!author = @Hausd0rff
+#!homepage = https://t.me/yqc_123/2577
+#!icon = https://raw.githubusercontent.com/cacads/For-own-use/master/App_icon/lv_web.ico
+
+[Script]
+http-request ^https?:\/\/commerce-api-lq\.faceu\.mobi\/commerce\/v1\/(subscription\/user_info|purchase\/draft_unlock) script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js, requires-body=false, timeout=10, tag=VideoFusionVipCrack
+
+[MITM]
+hostname = commerce-api-lq.faceu.mobi
