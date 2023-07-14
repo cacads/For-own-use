@@ -2,14 +2,26 @@
 
 使用插件
 
+[App解锁合集][def]
+
 ```ini
 https://raw.githubusercontent.com/cacads/For-own-use/master/Loon/Plugin/Collections.plugin
 ```
+
+[豆瓣][def2]
 
 ```ini
 https://raw.githubusercontent.com/cacads/For-own-use/master/Loon/Plugin/doban.plugin
 ```
 
+[Pixiv][def3]
+
 ```ini
 https://raw.githubusercontent.com/cacads/For-own-use/master/Loon/Plugin/pixiv.plugin
 ```
+
+[def]: https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/cacads/For-own-use/master/Loon/Plugin/Collections.plugin
+
+[def2]: https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/cacads/For-own-use/master/Loon/Plugin/doban.plugin
+
+[def3]: https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/cacads/For-own-use/master/Loon/Plugin/pixiv.plugin
