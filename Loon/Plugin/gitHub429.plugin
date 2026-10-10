@@ -1,11 +1,21 @@
 #!name=github429
-#!desc=解决github更新资源429问题
-#!author=广告必须死Tg群
-#!date=2025-04-29
+#!desc=解决 GitHub raw/gist 资源 429 限流（Accept-Language 指纹规避），3.5.1+ 新语法
+#!author=广告必须死Tg群（2026-10-10 升级为 Script/Rewrite v2 语法并收窄作用域）
+#!date=2026-10-10
+#!loon_version=3.5.1(983)
+
+# 原理：GitHub CDN（Fastly）对 raw/gist 的 429 是「IP + 请求指纹」启发式限流，
+# 指纹含 Accept-Language。将请求头统一改为 en-us 可避开针对 zh-CN 指纹的限流分支。
+# 注意：这是规避手段而非配额提升；若出口 IP 本身被限，仍需降低请求频率或走 jsDelivr。
 
 [Rewrite]
-^https:\/\/(raw|gist)\.githubusercontent\.com\/ header-replace Accept-Language en-us
-^https:\/\/github\.com\/ header-replace Accept-Language en-us
+request if ${url} ~= /^https:\/\/raw\.githubusercontent\.com\// then request.header.set("Accept-Language", "en-us")
+request if ${url} ~= /^https:\/\/gist\.githubusercontent\.com\// then request.header.set("Accept-Language", "en-us")
+
+# 可选：旧版还改写了 github.com 主站请求。副作用是浏览器访问 github.com 界面语言被强制为英文，
+# 且需把 github.com 一并加入 MitM 解密面。如确有需要（如下载 release 也频繁 429），
+# 取消下面两行注释，并在 hostname 中补回 github.com：
+# request if ${url} ~= /^https:\/\/github\.com\// then request.header.set("Accept-Language", "en-us")
 
 [Mitm]
-hostname = raw.githubusercontent.com,gist.githubusercontent.com,github.com
+hostname = raw.githubusercontent.com,gist.githubusercontent.com
