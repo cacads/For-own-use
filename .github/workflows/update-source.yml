@@ -1,0 +1,50 @@
+name: Update App Source
+
+on:
+  schedule:
+    # 每天 02:17 UTC（北京时间 10:17）刷新
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/build_source.py'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rebuild source.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/build_source.py
+
+      - name: Validate JSON
+        run: |
+          python3 - <<'PY'
+          import json
+          d = json.load(open('apps/source.json', encoding='utf-8'))
+          assert d['apps'], 'apps is empty'
+          n = sum(1 for a in d['apps'] if a['versions'])
+          print(f"OK: {len(d['apps'])} apps, {n} with downloads")
+          PY
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- apps/source.json; then
+            echo "no changes"
+          else
+            git add apps/source.json
+            git commit -m "chore: refresh app versions $(date -u +%Y-%m-%d)"
+            git push
+          fi
