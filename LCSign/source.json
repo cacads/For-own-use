@@ -2,8 +2,8 @@
   "name": "Cacads 自用源",
   "subtitle": "我手机上装的自签 / 侧载应用",
   "description": "本机实际安装的第三方应用集合，多来自 GitHub Releases，闭源应用仅作索引记录。此源按 LCSign / AltStore 格式生成。",
-  "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/icon.png",
-  "headerURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/header.png",
+  "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/icon.png",
+  "headerURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/header.png",
   "website": "https://github.com/cacads/For-own-use",
   "tintColor": "#1F5E4B",
   "featuredApps": [],
@@ -250,7 +250,7 @@
         }
       ],
       "_installedVersion": "2.9.0",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_sign.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_sign.png"
     },
     {
       "name": "LCSign",
@@ -270,7 +270,7 @@
         }
       ],
       "_installedVersion": "1.4",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_sign.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_sign.png"
     },
     {
       "name": "全能签",
@@ -281,7 +281,7 @@
       "category": "签名工具",
       "versions": [],
       "_installedVersion": "27.1.0",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_sign.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_sign.png"
     },
     {
       "name": "小源签",
@@ -292,7 +292,7 @@
       "category": "签名工具",
       "versions": [],
       "_installedVersion": "1.4.0",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_sign.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_sign.png"
     },
     {
       "name": "AirBeep",
@@ -303,7 +303,7 @@
       "category": "系统调试",
       "versions": [],
       "_installedVersion": "2.5.2",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_debug.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_debug.png"
     },
     {
       "name": "AirCard-iOS",
@@ -347,7 +347,7 @@
         }
       ],
       "_installedVersion": "1.3.2",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_debug.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_debug.png"
     },
     {
       "name": "MiniWatts",
@@ -439,7 +439,7 @@
         }
       ],
       "_installedVersion": "1.6.0",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_debug.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_debug.png"
     },
     {
       "name": "Roam Control",
@@ -467,7 +467,7 @@
         }
       ],
       "_installedVersion": "0.9.9",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_debug.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_debug.png"
     },
     {
       "name": "StikDebug",
@@ -487,7 +487,7 @@
         }
       ],
       "_installedVersion": "3.1.15",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_debug.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_debug.png"
     },
     {
       "name": "iCTRL Runner",
@@ -498,7 +498,7 @@
       "category": "系统调试",
       "versions": [],
       "_installedVersion": "1.0",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_debug.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_debug.png"
     },
     {
       "name": "Aidoku",
@@ -750,7 +750,7 @@
         }
       ],
       "_installedVersion": "0.9",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_media.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_media.png"
     },
     {
       "name": "EhPanda",
@@ -1002,7 +1002,7 @@
         }
       ],
       "_installedVersion": "2.8.1",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_media.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_media.png"
     },
     {
       "name": "Kumone",
@@ -1254,7 +1254,7 @@
         }
       ],
       "_installedVersion": "0.3.28",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_media.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_media.png"
     },
     {
       "name": "Mori",
@@ -1378,7 +1378,7 @@
         }
       ],
       "_installedVersion": "4.5.1",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_media.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_media.png"
     },
     {
       "name": "PiliPlus",
@@ -1630,7 +1630,7 @@
         }
       ],
       "_installedVersion": "2.2.0",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_media.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_media.png"
     },
     {
       "name": "Pixiv-SwiftUI",
@@ -1882,7 +1882,7 @@
         }
       ],
       "_installedVersion": "0.16.3",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_media.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_media.png"
     },
     {
       "name": "Pure Live",
@@ -1893,7 +1893,7 @@
       "category": "影音下载",
       "versions": [],
       "_installedVersion": "3.1.19",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_media.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_media.png"
     },
     {
       "name": "Simple Live",
@@ -1904,7 +1904,7 @@
       "category": "影音下载",
       "versions": [],
       "_installedVersion": "1.13.2",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_media.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_media.png"
     },
     {
       "name": "iTorrent",
@@ -2156,7 +2156,7 @@
         }
       ],
       "_installedVersion": "2.2.0",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_media.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_media.png"
     },
     {
       "name": "Rex",
@@ -2167,7 +2167,7 @@
       "category": "浏览电视",
       "versions": [],
       "_installedVersion": "1.0.1",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_tv.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_tv.png"
     },
     {
       "name": "iBox",
@@ -2178,7 +2178,7 @@
       "category": "浏览电视",
       "versions": [],
       "_installedVersion": "2.5.0",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_tv.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_tv.png"
     },
     {
       "name": "亚瑟浏览器",
@@ -2189,7 +2189,7 @@
       "category": "浏览电视",
       "versions": [],
       "_installedVersion": "25.6",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_tv.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_tv.png"
     },
     {
       "name": "知乎--",
@@ -2200,7 +2200,7 @@
       "category": "浏览电视",
       "versions": [],
       "_installedVersion": "0.9.5",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_tv.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_tv.png"
     },
     {
       "name": "Trace",
@@ -2211,7 +2211,7 @@
       "category": "摄影工具",
       "versions": [],
       "_installedVersion": "6.86",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_photo.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_photo.png"
     },
     {
       "name": "扫描全能王",
@@ -2222,7 +2222,7 @@
       "category": "摄影工具",
       "versions": [],
       "_installedVersion": "7.26.6",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_photo.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_photo.png"
     },
     {
       "name": "飓风相机",
@@ -2233,7 +2233,7 @@
       "category": "摄影工具",
       "versions": [],
       "_installedVersion": "1.8.7",
-      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/App_icons/cat_photo.png"
+      "iconURL": "https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/App_icons/cat_photo.png"
     }
   ],
   "news": []
