@@ -7,16 +7,16 @@
 ## 订阅地址
 
 ```
-https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/apps/source.json
+https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/LCSign/source.json
 ```
 
 在 LCSign 里添加：`设置 → 软件源 → 添加`，或直接点下面的链接：
 
-[**一键添加到 LCSign**](loadcontroller://addsource?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcacads%2FFor-own-use%2Frefs%2Fheads%2Fmaster%2Fapps%2Fsource.json)
+[**一键添加到 LCSign**](loadcontroller://addsource?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcacads%2FFor-own-use%2Frefs%2Fheads%2Fmaster%2FLCSign%2Fsource.json)
 
 > 若要更新，建议用 **jsDelivr CDN**（国内访问更快，raw.githubusercontent 常被墙）：
 > ```
-> https://cdn.jsdelivr.net/gh/cacads/For-own-use@master/apps/source.json
+> https://cdn.jsdelivr.net/gh/cacads/For-own-use@master/LCSign/source.json
 > ```
 > 注意 jsDelivr 有约 12 小时缓存，刚推送的新版不会立刻生效。
 
@@ -51,21 +51,25 @@ https://raw.githubusercontent.com/cacads/For-own-use/refs/heads/master/apps/sour
 ## 文件结构
 
 ```
-apps/source.json     ← 软件源本体（AltStore / LCSign 格式）
-App_icons/           ← 源图标、头图、分类图标
-scripts/build_source.py  ← 重新生成 source.json
-.github/workflows/update-source.yml  ← 定时自动刷新版本
+LCSign/
+├── source.json        ← 软件源本体（AltStore / LCSign 格式）
+├── App_icons/         ← 源图标、头图、5 个分类图标
+├── build_source.py    ← 重新生成 source.json
+├── update-source.yml  ← 定时刷新工作流说明
+└── README.md
+
+.github/workflows/update-source.yml  ← 每日自动刷新
 ```
 
 ## 自动更新
 
 `update-source.yml` 每天定时（以及手动触发）重新拉取各仓库的最新 Release，
-有变化就自动提交 `apps/source.json`。
+有变化就自动提交 `LCSign/source.json`。
 
 本地手动刷新：
 
 ```bash
-GITHUB_TOKEN=<your_token> python3 scripts/build_source.py
+GITHUB_TOKEN=<your_token> python3 LCSign/build_source.py
 ```
 
 ## 免责声明

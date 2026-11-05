@@ -164,7 +164,7 @@ def main():
     for a in apps:
         a['iconURL'] = f"{RAW}/App_icons/cat_{cmap.get(a.get('category'), 'sign')}.png"
 
-    out = os.environ.get('OUT_PATH', os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'apps', 'source.json'))
+    out = os.environ.get('OUT_PATH', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'source.json'))
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, 'w', encoding='utf-8') as f:
         json.dump(source, f, ensure_ascii=False, indent=2)

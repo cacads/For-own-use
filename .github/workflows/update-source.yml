@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'scripts/build_source.py'
+      - 'LCSign/build_source.py'
 
 permissions:
   contents: write
@@ -25,13 +25,13 @@ jobs:
       - name: Rebuild source.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/build_source.py
+        run: python3 LCSign/build_source.py
 
       - name: Validate JSON
         run: |
           python3 - <<'PY'
           import json
-          d = json.load(open('apps/source.json', encoding='utf-8'))
+          d = json.load(open('LCSign/source.json', encoding='utf-8'))
           assert d['apps'], 'apps is empty'
           n = sum(1 for a in d['apps'] if a['versions'])
           print(f"OK: {len(d['apps'])} apps, {n} with downloads")
@@ -41,10 +41,10 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- apps/source.json; then
+          if git diff --quiet -- LCSign/source.json; then
             echo "no changes"
           else
-            git add apps/source.json
-            git commit -m "chore: refresh app versions $(date -u +%Y-%m-%d)"
+            git add LCSign/source.json
+            git commit -m "chore(lcsign): refresh app versions $(date -u +%Y-%m-%d)"
             git push
           fi
