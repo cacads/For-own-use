@@ -1265,6 +1265,14 @@
       "category": "影音下载",
       "versions": [
         {
+          "version": "4.5.2",
+          "date": "2026-11-05",
+          "localizedDescription": "# What's New in Mori 4.5.2\r\n\r\n### New Features & Enhancements\r\n\r\n* **Batch Media Format Preference**: Added user preference under Settings -> Behavior Settings (`mori_batch_format`) to choose between \"Video (Best Available)\" and \"Audio Only (MP3)\" during batch downloads with complete 9-language localization support.\r\n* **Pure Audio Batch Pipeline**: Dedicated audio download handling for Spotify, Apple Music, and Bandcamp preventing songs from entering photo carousel or PDF compiler logic.\r\n* **Silent Shorts Normalization**: Automatic canonicalization in batch analyzer (`analyzeUrlSilent`) ensuring queued YouTube Shorts links resolve reliably without manual URL editing.\r\n* **Mori CLI First-Class Desktop Runner**: Replaced legacy desktop download links on the landing page with official standalone Mori CLI instructions (`npx @coflyn/mori`).\r\n\r\n### Bug Fixes & Scraper Repairs\r\n\r\n* **YouTube Shorts Canonicalization**: Automatically transformed `/shorts/` paths to standard watch URLs across downloader, converter engine (`convert1s.com`), and CLI, resolving download failures (#20).\r\n* **Instagram FastDL Backend**: Migrated backend to FastDL with automated token and expiry extraction (`k_e",
+          "downloadURL": "https://github.com/coflyn/Mori/releases/download/v4.5.2/Mori-v4.5.2-iOS-Unsigned.ipa",
+          "size": 2099534,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "4.5.1",
           "date": "2026-10-18",
           "localizedDescription": "What's New in v4.5.1\r\n\r\n- Automatic System Language Detection: Automatically detects device and browser language on first launch via navigator.languages / navigator.language and maps to 9 supported locales (Simplified Chinese, Indonesian, Japanese, Korean, Arabic, Russian, Tagalog, Hindi, and English fallback) (#17)\r\n- Android Share Sheet Locale Fallback: Added native Locale.getDefault() language detection in ShareActivity.java so shared links match device language even before app initialization\r\n- Gallery Tab Visibility Toggle: Added toggle to show or hide the Gallery tab under Settings -> Appearance (mori_show_gallery), completely bypassing background disk scans to save RAM and battery on lower-end devices\r\n- TikTok tt.site Shortlink Recognition: Added automatic recognition and URL cleaning for TikTok tt.site shortlink domains across single downloads, batch downloads, and share activities\r\n- Multilingual Gallery Localization: Fully localized gallery filter chips, sort options, and action toasts across all 9 supported languages\r\n- Progressive Gallery Rendering: Implemented incremental batch rendering (24 items per batch) with IntersectionObserver sentinel for smooth, lag-free scro",
