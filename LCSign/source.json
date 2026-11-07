@@ -358,6 +358,14 @@
       "category": "系统调试",
       "versions": [
         {
+          "version": "1.7.0",
+          "date": "2026-11-07",
+          "localizedDescription": "Unsigned build — sign it with your own Apple ID before installing.\nhttps://github.com/ResistanceTo/MiniWatts#install\n\n## 改进\n\n- **温度可以显示为华氏度。** 设置 → 单位 里可选\"自动 / °C / °F\"。\"自动\"跟随系统地区，以及\"设置 › 通用 › 语言与地区\"里的\"温度\"选项，所以地区使用华氏度的用户升级后会直接看到 °F。App 各页、图表、热力图、悬浮读数、实时活动和小组件都按所选单位显示；原始数据仍显示传感器给出的 °C。(#25)\n- **充电预估。** 充电时，功率页会显示充到 80% 和充到 100% 还要多久，以及大约几点。时间根据电量实际上升的速度推算，不依赖电池能量设置；要等电量变化两次才会出现，通常需要几分钟。80% 以后按典型充电曲线估算，只是近似值。(#27)\n- **显示版本号。** 设置 → 关于 里显示当前版本，原始数据导出的第一行也带上了版本号。(#27)\n- **iPad 布局。** iPad 横屏和 13 英寸竖屏时，各页分成两栏；窄屏时仍是一栏。历史记录里单次充电的详情页在 iPad 上不再横向铺满。(#22)\n- **iPad 热力图。** 在 iPad 上，发热页画的是 iPad 的轮廓，各区域按 iPad Pro 11 英寸的内部布局放置：主板在中间，两侧是电芯，充电芯片在 USB-C 接口旁。设备页和设置里的图标也换成了 iPad。(#13, #22)\n\n## 修复\n\n- 发热：CPU 簇（`pACC`、`eACC`）和图像处理器（`ISP`）等传感器以前被归入\"其他传感器\"，现在算作 SoC，SoC 区域的温度也会把它们算进去。iPhone 11 上 `FrontCameraDie`、`BCMLBSkin` 这类名字连写的传感器以前会被分错区（比如前摄像头被当成机身），现在会先拆词再归类。(#13, #14)\n- 适配器页里\"单次采样\"那段说明以前在中文界面下一直显示英文，现在已有中文。\n\n## 注意\n\n- iPad 相关的改动只在模拟器里验证过，我手上没有 iPad。如果在 iPad 上看到问题，请从 设置 → 原始数据 复制导出并反馈。\n- iPad 上\"来自充电器\"的功率偏低（#13）这次还没有修：要确认其余的输入由哪个传感器测量，需要一份**充电时**导出的原始数据。有 iPad 的话，请在充电时从 设置 → 原始数据 复制导出，贴到 #13。\n- 充电预估无法知道是否开启了充电上限或优化电池充电。如果开着，电池会在上限前停下，\"充到 100%\"的时间就不准。\n\n---\n\n## Improvements\n\n- **Temperatures can be shown i",
+          "downloadURL": "https://github.com/ResistanceTo/MiniWatts/releases/download/v1.7.0/MiniWatts-unsigned.ipa",
+          "size": 3374224,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "1.6.0",
           "date": "2026-10-27",
           "localizedDescription": "Unsigned build — sign it with your own Apple ID before installing.\nhttps://github.com/ResistanceTo/MiniWatts#install\n\n## 改进\n\n- **iPhone 18 Pro 高功率充电时会提示读数可能只有一半。** 在 iPhone 18 Pro 系列上用有线充电、协商功率超过 30 W 时，表盘旁会显示\"可能只读到一半\"，功率页和适配器页也会说明原因：这种情况下输入和电芯两侧的传感器都可能只测到一半功率。数值本身不做修正。\n- **新增\"电量核对\"。** 充电时，App 会把电量上升的速度换算成功率，和电芯传感器在同一段时间里测到的功率对比。如果电量涨得明显比传感器测到的快（1.6 倍以上），表盘旁会显示\"读数偏低\"，并给出两边的数值；如果两边一致，会显示核对通过，上面那条\"可能只读到一半\"的提示也会隐藏。电量要上涨至少 3% 才能给出结果，通常需要几分钟。\n- **传感器按 SMC key 识别，重复的读数会合并。** iOS 27 上每个传感器都会出现两份，以前只取第一份，现在取两份的平均值；发热页的列表里每个传感器也只出现一次。发热页和原始数据会在传感器名旁边标出 key（比如电池温度偏高的那个是 `TG0B`）。\n- **电池能量按机型给默认值。** iPhone 18 Pro Max 为 21.75 Wh，iPhone 17 Pro Max 为 19.7 Wh，其他机型仍是 15 Wh。设置 → 电池能量 里会显示本机型的额定值，点\"使用\"即可填入。已经手动设置过的值保持不变。\n- **原始数据新增\"Derived power checks\"一节。** 这一节记录半功率提示是否生效，以及电量核对的结果。\n\n## 修复\n\n- 适配器：iPhone 18 Pro 高功率充电时，读数偏低不再被误判成线材或接口的问题；在无法确认读数完整时，不计算线路电阻和电流利用率。\n\n## 注意\n\n- iPhone 18 Pro 高功率充电时，完整的输入功率仍然读不到：另一路充电电流没有可读的传感器。这个版本只能提示和核对，不能补上缺失的功率；这段时间的充电记录里的能量统计也仍然偏低。\n- \"电量核对\"还没有在 iPhone 18 Pro 上验证过。如果你有这台手机，请在 45 W 充电、电量上涨几个百分点之后，从 设置 → 原始数据 复制导出并反馈。\n- 如果你的机型不在上面的列表里，请在 设置 → 电池能量 里填入正确的数值，否则电量核对可能一直给不出结论。\n- 部分发现来自 ChargeSpeed 作者在 iPhone 18 Pro Max 上的实测。\n\n---\n\n## Improvements\n\n- **The iPhone 18 Pro now w",
@@ -477,6 +485,14 @@
       "localizedDescription": "设备端调试器与 JIT 启用工具，为模拟器等场景提供支持。",
       "category": "系统调试",
       "versions": [
+        {
+          "version": "3.2.1",
+          "date": "2026-11-07",
+          "localizedDescription": "- More error cleanup\r\n- Chinese (Simplified) localization\r\n- Kill processes via name via url scheme\r\n- FYI- StikDebug now requires Xcode 27+\n\n## What's Changed\n* Added Chinese localization by @jlj1102 in https://github.com/StikDebug/StikDebug/pull/494\n\n## New Contributors\n* @jlj1102 made their first contribution in https://github.com/StikDebug/StikDebug/pull/494\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.2.0...3.2.1",
+          "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.2.1/StikDebug-3.2.1.ipa",
+          "size": 16924629,
+          "minOSVersion": "15.0"
+        },
         {
           "version": "3.2.0",
           "date": "2026-10-30",
@@ -1013,6 +1029,14 @@
       "category": "影音下载",
       "versions": [
         {
+          "version": "0.3.29",
+          "date": "2026-11-06",
+          "localizedDescription": "### Fixed\n\n- **macOS**: the now-playing page opens and closes cleanly — the page title, search field and sidebar toggle no longer hang over it while it moves, it no longer snaps into place at the end, and the thin white line beside the window buttons is gone; its collapse button is larger, sits in the top-right corner and always answers clicks.\n- **iOS**: adding a song to a playlist from the now-playing page shows the confirmation over the page; a song that is already in the playlist says so, and any other failure is shown inside the playlist picker (#182).\n- **iOS**: the search field stays visible when the Search tab opens.\n\n### Improved\n\n- **macOS**: hiding and showing the sidebar is smooth — the sidebar stays put and the page slides over it, the toggle never leaves its place beside the window buttons, the page title moves with the page, and View → Hide/Show Sidebar (⌃⌘S) is back.\n- **macOS**: the back button follows the sidebar toggle and, like it, is drawn without a glass capsule.\n- **macOS**: in the player bar, the like button sits right after the song title.\n\n---\n\n### 修复\n\n- **macOS**：播放页的打开和收起更干净——移动过程中页面标题、搜索框和侧栏按钮不再浮在播放页上，结束时不再突然跳一下，红绿灯旁的白色细线也没有了；收起按钮更大，移到右上角，并且每次点击都能响应。\n- ",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.29/Kumone-iOS-0.3.29.ipa",
+          "size": 3937238,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "0.3.28",
           "date": "2026-11-04",
           "localizedDescription": "### Improved\n\n- **macOS**: the bundle identifier is now `sb.moe.kumone`. After updating, settings and caches start fresh, the first-launch check appears once more, the iCloud sync passphrase has to be entered again and system permissions (such as notifications) need granting again; sign-in and offline downloads carry over.\n- **iOS**: the bundle identifier is now `sb.moe.kumone-ios`. AltStore and other sideloading tools install it as a separate app; once it is set up, the old one can be deleted.\n\n---\n\n### 改进\n\n- **macOS**：bundle ID 改为 `sb.moe.kumone`。更新后设置和缓存会重置，需要再做一次首次启动验证、重新输入 iCloud 同步口令，并重新授予通知等系统权限；登录状态和离线下载保留。\n- **iOS**：bundle ID 改为 `sb.moe.kumone-ios`。AltStore 等侧载工具会把它装成一个新的 App，设置好之后可以删除旧版。",
@@ -1242,14 +1266,6 @@
           "localizedDescription": "### Added / 新增\n\n- iOS 16 support: the minimum iOS version is lowered from 17 to 16 (iPhone 8 / X and later). The Observation-based state layer was rewritten to classic `ObservableObject`, with the high-frequency playback position split into its own `PlaybackClock` so only the scrubbers and lyrics re-render per tick — everything else is unaffected. macOS behavior is unchanged.\n- Liquid Glass tab bar on iOS: iOS 26+ uses the native glass tab bar; iOS 16–25 gets a Telegram-style simulated glass bar (blurred material capsule with an edge highlight, hairline rim, and soft shadow).\n- iOS 16 支持：最低 iOS 版本从 17 降到 16（iPhone 8 / X 及之后机型）。基于 Observation 的状态层重写为经典 `ObservableObject`，并把高频播放进度拆到独立的 `PlaybackClock`，每秒跳动只重绘进度条与歌词，其余视图不受影响；macOS 行为不变。\n- iOS 玻璃 Tab Bar：iOS 26+ 使用系统原生玻璃 Tab Bar；iOS 16–25 使用 Telegram 风格的仿制玻璃（材质模糊胶囊 + 边缘高光 + 细描边 + 柔和投影）。\n\n### Improved / 改进\n\n- Redesigned the phone-code login form (rounded card-style input rows) and added a notice that SMS login may be blocked by NetEase's risk control — QR sign-in is recommended.\n- 重新设计手机验证码登录表单（圆角卡片式输入行），并提示短信登录可能被网易云风控拦截、推荐使用扫码登录。",
           "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.0/Kumone-iOS-0.3.0.ipa",
           "size": 6661575,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "0.2.7",
-          "date": "2026-08-25",
-          "localizedDescription": "### Added / 新增\n\n- iOS in-app auto-update for TrollStore devices (Dopamine-style): checks GitHub on launch and from Settings → About → Check for Updates, shows a circular download-progress ring, and hands the IPA to TrollStore via `apple-magnifier://install?url=` for one-tap install; plain sideloads fall back to opening the release page (README documents the TrollStore requirement)\n- iOS 应用内自动更新（针对 TrollStore / 巨魔设备，参考 Dopamine）：启动时与「设置 → 关于 → 检查更新」查询 GitHub，带圆环下载进度，并通过 `apple-magnifier://install?url=` 移交 TrollStore 一键安装；普通侧载则降级为打开发布页（README 已注明仅限 TrollStore）",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.2.7/Kumone-iOS-0.2.7.ipa",
-          "size": 6619558,
           "minOSVersion": "15.0"
         }
       ],
