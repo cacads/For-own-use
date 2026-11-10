@@ -1037,6 +1037,30 @@
       "category": "影音下载",
       "versions": [
         {
+          "version": "0.3.32",
+          "date": "2026-11-09",
+          "localizedDescription": "### Added\n\n- **iOS**: eight sound-effect presets and a ten-band custom equalizer on the now-playing page and in Settings, with a live response curve. A change applies to the playing track without rebuilding the player (#191).\n\n### Improved\n\n- **iOS**: the app follows the system language, English or Simplified Chinese, as the macOS app does (#191).\n- **Localization**: the English interface is complete on macOS, iOS and CarPlay. Album, playlist, artist and search pages, the iOS updater and CarPlay no longer fall back to Chinese, and VoiceOver reads the now-playing buttons in English. CarPlay play counts use K/M/B in English.\n- **Downloads**: a failed download now says why — the service's own reason (such as a risk-control refusal) or the system error code — instead of only asking you to check the network (#141).\n\n---\n\n### 新增\n\n- **iOS**：播放页和设置里新增八种音效预设和十段自定义均衡器，并带实时频率响应曲线。切换后直接作用于当前播放，不用重建播放器（#191）。\n\n### 改进\n\n- **iOS**：与 macOS 一样跟随系统语言，支持英文和简体中文（#191）。\n- **本地化**：macOS、iOS 与 CarPlay 的英文界面补齐。专辑、歌单、歌手与搜索页面、iOS 更新流程和 CarPlay 不再夹杂中文，播放页按钮的 VoiceOver 朗读也有了英文。CarPlay 的播放次数在英文下使用 K/M/B。\n- **下载**：下载失败时会说明原因（如服务端的风控拒绝）或系统错误码，而不再只提示检查网络（#141）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.32/Kumone-iOS-0.3.32.ipa",
+          "size": 4060424,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "0.3.31",
+          "date": "2026-11-09",
+          "localizedDescription": "### Fixed\n\n- **Downloads**: lossless and Hi-Res downloads no longer fail with \"Audio verification failed\": the CDN labels FLAC files as MP3, and that label no longer rejects a file whose checksum and decoding are already verified (#147).\n\n---\n\n### 修复\n\n- **下载**：无损和 Hi-Res 音质下载不再报「音频校验失败」。CDN 会把 FLAC 文件标成 MP3 类型，现在不再因为这个标签拒收已通过校验和解码验证的文件（#147）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.31/Kumone-iOS-0.3.31.ipa",
+          "size": 3937670,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "0.3.30",
+          "date": "2026-11-09",
+          "localizedDescription": "### Fixed\n\n- **macOS**: on macOS 15 Sequoia, the toolbar search field stays at the trailing end of the window instead of sitting beside the sidebar toggle and covering the page title (#188).\n- **macOS**: on macOS 15 Sequoia, the sidebar is back to the system sidebar material, flush with the window edge, and the toolbar is back to its standard height (#193).\n\n---\n\n### 修复\n\n- **macOS**：在 macOS 15 Sequoia 上，工具栏搜索框保持在窗口右侧，而不再挤在侧栏按钮旁边挡住页面标题（#188）。\n- **macOS**：在 macOS 15 Sequoia 上，侧栏恢复系统原生侧栏材质并贴齐窗口边缘，工具栏恢复标准高度（#193）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.30/Kumone-iOS-0.3.30.ipa",
+          "size": 3937239,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "0.3.29",
           "date": "2026-11-06",
           "localizedDescription": "### Fixed\n\n- **macOS**: the now-playing page opens and closes cleanly — the page title, search field and sidebar toggle no longer hang over it while it moves, it no longer snaps into place at the end, and the thin white line beside the window buttons is gone; its collapse button is larger, sits in the top-right corner and always answers clicks.\n- **iOS**: adding a song to a playlist from the now-playing page shows the confirmation over the page; a song that is already in the playlist says so, and any other failure is shown inside the playlist picker (#182).\n- **iOS**: the search field stays visible when the Search tab opens.\n\n### Improved\n\n- **macOS**: hiding and showing the sidebar is smooth — the sidebar stays put and the page slides over it, the toggle never leaves its place beside the window buttons, the page title moves with the page, and View → Hide/Show Sidebar (⌃⌘S) is back.\n- **macOS**: the back button follows the sidebar toggle and, like it, is drawn without a glass capsule.\n- **macOS**: in the player bar, the like button sits right after the song title.\n\n---\n\n### 修复\n\n- **macOS**：播放页的打开和收起更干净——移动过程中页面标题、搜索框和侧栏按钮不再浮在播放页上，结束时不再突然跳一下，红绿灯旁的白色细线也没有了；收起按钮更大，移到右上角，并且每次点击都能响应。\n- ",
@@ -1250,30 +1274,6 @@
           "localizedDescription": "### Improved / 改进\n\n- iOS 16–25 glass tab bar rebuilt to match Telegram's Liquid Glass bar 1:1 (studied from telegram-ios `TabBarComponent` / `LiquidLensView`): the selection is a bar-height capsule using Telegram's own faint tint — a subtle darkening in light, a subtle lightening in dark — instead of a bright chip, and unselected items use an 80%-black filled icon + 10pt label. The pill is now **interactive**: drag it and it tracks your finger, switching tabs live and settling with a spring on release; a tap slides it there.\n- iOS 16–25 玻璃 Tab Bar 按 Telegram 的 Liquid Glass 栏 1:1 重制（参照 telegram-ios 的 `TabBarComponent` / `LiquidLensView`）：选中块改为与栏等高的胶囊、采用 Telegram 同款的淡淡着色（浅色下轻微压暗、深色下轻微提亮），不再是过亮的方块；未选中项用 80% 黑的填充图标 + 10pt 文字。选中滑块现在**可交互**：拖动它会跟随手指在标签间滑动、实时切换页面，松手后以弹簧动画归位；点按则滑动过去。",
           "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.3/Kumone-iOS-0.3.3.ipa",
           "size": 6672349,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "0.3.2",
-          "date": "2026-08-25",
-          "localizedDescription": "### Fixed / 修复\n\n- iOS in-app update no longer tries to \"detect\" TrollStore. The previous detection (via `canOpenURL` / `LSApplicationProxy`) gave false negatives — reporting \"TrollStore not detected\" on devices that clearly had it and had URL schemes enabled. Following Dopamine, the update sheet now always offers a one-tap **自动安装（TrollStore）** that fires `apple-magnifier://install?url=…` directly (`open` needs no scheme whitelisting), with a manual **下载 IPA** fallback for other sideloaders.\n- iOS 应用内更新不再「检测」TrollStore。之前用 `canOpenURL` / `LSApplicationProxy` 检测会误判——明明装了巨魔、也开了 URL Scheme，却提示「未检测到 TrollStore」。参照 Dopamine，更新弹窗现在始终提供一键 **自动安装（TrollStore）**，直接唤起 `apple-magnifier://install?url=…`（`open` 无需 scheme 白名单），并保留 **下载 IPA** 手动侧载入口。\n\n### Improved / 改进\n\n- iOS 16–25 glass tab bar now matches the iOS 26 native Liquid Glass bar 1:1: a near-full-width frosted capsule, filled primary-colour icons (accent on the selected tab), and a subtle sliding lighter-glass pill — replacing the earlier bright, oversized chip and washed-out grey icons.\n- iOS 16–25 玻璃 Tab Bar 现在与 iOS 26 原生 Liquid Glass 栏 1:1 对齐：接近满宽的磨砂胶囊、填充的主色图标（选中项为强调色）、低调滑动的浅玻璃选中块——取代之前过亮过大的方块与灰扁的图标。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.2/Kumone-iOS-0.3.2.ipa",
-          "size": 6670753,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "0.3.1",
-          "date": "2026-08-25",
-          "localizedDescription": "### Fixed / 修复\n\n- iOS 16–25: removed the duplicate system tab bar that was showing behind the glass tab bar. The pre-26 layout no longer hosts a `TabView` (each tab is a persistent `NavigationStack` shown/hidden in place), so there is now exactly one tab bar.\n- iOS 16–25：修复玻璃 Tab Bar 背后还叠着一个系统原生 Tab Bar 的问题。26 以下的布局不再使用 `TabView`（每个标签为常驻的 `NavigationStack`，就地显隐），现在只有一个 Tab Bar。\n\n### Improved / 改进\n\n- iOS 16–25 glass tab bar: the selected tab now sits on a brighter, dimensional glass chip — a Telegram-style continuous-rounded squircle with a specular highlight, hairline rim, and soft shadow — that clearly lifts off the bar, instead of the previous flat wash.\n- iOS 16–25 玻璃 Tab Bar：选中项改为更明亮、有立体感的玻璃方块——Telegram 风格的连续圆角方块，带高光、细描边与柔和投影——明显浮于栏面，不再是之前扁平的一层。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.1/Kumone-iOS-0.3.1.ipa",
-          "size": 6674219,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "0.3.0",
-          "date": "2026-08-25",
-          "localizedDescription": "### Added / 新增\n\n- iOS 16 support: the minimum iOS version is lowered from 17 to 16 (iPhone 8 / X and later). The Observation-based state layer was rewritten to classic `ObservableObject`, with the high-frequency playback position split into its own `PlaybackClock` so only the scrubbers and lyrics re-render per tick — everything else is unaffected. macOS behavior is unchanged.\n- Liquid Glass tab bar on iOS: iOS 26+ uses the native glass tab bar; iOS 16–25 gets a Telegram-style simulated glass bar (blurred material capsule with an edge highlight, hairline rim, and soft shadow).\n- iOS 16 支持：最低 iOS 版本从 17 降到 16（iPhone 8 / X 及之后机型）。基于 Observation 的状态层重写为经典 `ObservableObject`，并把高频播放进度拆到独立的 `PlaybackClock`，每秒跳动只重绘进度条与歌词，其余视图不受影响；macOS 行为不变。\n- iOS 玻璃 Tab Bar：iOS 26+ 使用系统原生玻璃 Tab Bar；iOS 16–25 使用 Telegram 风格的仿制玻璃（材质模糊胶囊 + 边缘高光 + 细描边 + 柔和投影）。\n\n### Improved / 改进\n\n- Redesigned the phone-code login form (rounded card-style input rows) and added a notice that SMS login may be blocked by NetEase's risk control — QR sign-in is recommended.\n- 重新设计手机验证码登录表单（圆角卡片式输入行），并提示短信登录可能被网易云风控拦截、推荐使用扫码登录。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.0/Kumone-iOS-0.3.0.ipa",
-          "size": 6661575,
           "minOSVersion": "15.0"
         }
       ],
