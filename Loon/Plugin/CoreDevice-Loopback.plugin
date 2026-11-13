@@ -1,0 +1,16 @@
+#!name=CoreDevice RSD 本地回环
+#!desc=免电脑、免越狱，在 iPhone 单机内建立 CoreDevice RSD 极客通信隧道（10.7.0.1 反射回环）。核心为 include-tun + reflect，参考 https://nsloon.app/docs/General/#include-tun
+#!icon=https://raw.githubusercontent.com/ios151/Rewrite/refs/heads/main/dev-loopback/modules/dev-loopback.png
+#!author=OpenMinis
+#!homepage=https://nsloon.app/docs/General/#include-tun
+#!loon_version=3.5.3(1007)
+
+[General]
+# 关闭 IPv6 虚拟接口，避免 IPv6 流量干扰纯 IPv4 回环
+ipv6-vif = off
+# 强制把发往 10.7.0.1 的流量捕获进 Loon 的 TUN（否则会被默认 bypass-tun = 10.0.0.0/8 绕过）
+include-tun = 10.7.0.1/32
+
+[IP Rewrite]
+# 核心：交换源/目的 IP 后回注本机协议栈，端口与载荷原样保留
+10.7.0.1 = reflect
