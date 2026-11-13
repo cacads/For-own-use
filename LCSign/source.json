@@ -785,6 +785,14 @@
       "category": "影音下载",
       "versions": [
         {
+          "version": "3.0.0",
+          "date": "2026-11-12",
+          "localizedDescription": "EhPanda 3.0 is rebuilt with a new look.\r\n\r\n- Download galleries to read offline, sort them into folders, and keep downloading in the background.\r\n- Jump to galleries around any date with Seek to Date.\r\n- Log in with your username and password again, even behind a Cloudflare check.\r\n- Report comments, see a warning before posting, and block users.\r\n- Larger text, VoiceOver and Voice Control now work across the app.\r\n- Every screen rotates with your device, so the Enables landscape setting is gone.\r\n- The Auto-Lock setting is gone. To lock EhPanda, touch and hold its icon, then choose Require Face ID or Require Touch ID.\r\n- On first launch, you confirm you're an adult and choose how much anonymous usage data to share.\r\n- WebP images now display, and many bugs are fixed.\r\n\r\nhttps://ehpanda.app\r\n\r\n<details>\r\n<summary>Deutsch</summary>\r\n\r\nEhPanda 3.0 ist neu gebaut, mit neuem Design.\r\n\r\n- Lade Galerien zum Offline-Lesen herunter, sortiere sie in Ordner und lade im Hintergrund weiter.\r\n- Mit „Zu Datum springen“ gelangst du zu Galerien rund um ein beliebiges Datum.\r\n- Melde dich wieder mit Benutzername und Passwort an, auch hinter einer Cloudflare-Prüfung.\r\n- Du kannst Kommentare melden, ",
+          "downloadURL": "https://github.com/EhPanda-Team/EhPanda/releases/download/3.0.0/EhPanda-AltStore.ipa",
+          "size": 18858405,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "2.8.1",
           "date": "2026-07-20",
           "localizedDescription": "1. feat: Adapt to the new Liquid Glass design.\r\n3. fix: Gesture issue in the reading page.\r\n4. fix: Crash issue in eh setting page.\r\n5. fix: A minor issue in search page.",
@@ -1015,14 +1023,6 @@
           "downloadURL": "https://github.com/EhPanda-Team/EhPanda/releases/download/v2.1.2_b129/EhPanda.ipa",
           "size": 8964935,
           "minOSVersion": "15.0"
-        },
-        {
-          "version": "3.0.0",
-          "date": "2026-11-11",
-          "localizedDescription": "## Features\r\n\r\n- **Offline downloads.** Save galleries to your device and read them with no connection. Sort them into folders, and let the app repair a download that got interrupted or update it later. Downloads keep going while the app is in the background and won't get cut off partway.\r\n- **Date Seek.** Jump straight to a specific date while paging through a gallery. It works on the Frontpage, Watched and Favorites lists.\r\n- **WebP images** are now supported.\r\n- **Redesigned toasts.** Progress and status messages (login, page jump, background updates, and more) now show as a sleek glass toast at the bottom of the screen instead of a pop-up spinner.\r\n\r\n## Bugfixes\r\n\r\n- The page slider and the current page no longer drift out of sync\r\n- Fixed a gesture problem in the reading control panel\r\n- Fixed a crash on the EH settings page\r\n- Fixed the missing toolbar item on the reading settings page\r\n- Fixed an empty cell in quick search\r\n- Fixed layout issues on the tags extension settings, the About page, and gallery cells in other languages\r\n- Fixed the search title disappearing\r\n- Fixed two settings pages opening at once on iPad\r\n- Fixed page tracking and zoom boundaries while reading\r",
-          "downloadURL": "https://github.com/EhPanda-Team/EhPanda/releases/download/3.0.0/EhPanda-Beta.ipa",
-          "size": 18850504,
-          "minOSVersion": "15.0"
         }
       ],
       "_installedVersion": "2.8.1",
@@ -1036,6 +1036,22 @@
       "localizedDescription": "使用 SwiftUI 构建的跨平台原生音乐播放器。",
       "category": "影音下载",
       "versions": [
+        {
+          "version": "0.3.34",
+          "date": "2026-11-12",
+          "localizedDescription": "### Added\n\n- **Comments**: read a song's comments from its context menu, or on iOS from the now-playing page's More menu — top comments first, then the latest, loading more as you scroll, with the reply each one answers and its likes. Signed in, you can like a comment or take the like back (#113).\n- **Search**: on iOS every playlist can be searched (the magnifying glass, or pull down), not only Liked Songs; tapping a result plays the whole playlist from that song (#185).\n- **Cloud Disk**: search by song, artist, album or uploaded file name, on macOS and iOS. The cloud disk now loads every song instead of the first 1,000, so search and Play All cover them all (#186).\n\n### Improved\n\n- **iOS**: Daily Recs drops the large cover banner at the top, so the songs start right below the date, title and Play All.\n\n---\n\n### 新增\n\n- **评论**：从歌曲的右键 / 长按菜单，或 iOS 播放页的「更多」菜单查看歌曲评论——先显示热门评论，再显示最新评论，滚动时自动加载更多，并显示所回复的评论和点赞数。登录后可以给评论点赞或取消点赞（#113）。\n- **搜索**：iOS 上所有歌单都可以在歌单内搜索（右上角放大镜，或在列表顶部下拉），不再只限「我喜欢的音乐」；点搜索结果会从这首开始播放整个歌单（#185）。\n- **音乐云盘**：macOS 和 iOS 都可以按歌名、歌手、专辑或上传的文件名搜索。云盘现在会加载全部歌曲，不再只加载前 1000 首，搜索和「播放全部」都覆盖所有歌曲（#186）。\n\n### 改进\n\n- **iOS**：每日推荐去掉了顶部的大封面横幅，日期、标题和「播放全部」下面直接就是歌曲列表。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.34/Kumone-iOS-0.3.34.ipa",
+          "size": 4270017,
+          "minOSVersion": "15.0"
+        },
+        {
+          "version": "0.3.33",
+          "date": "2026-11-12",
+          "localizedDescription": "### Added\n\n- **Login**: sign in with a Cookie when QR or SMS login does not work — paste a browser Cookie with `MUSIC_U` (and optionally `__csrf`); it is verified on its own before it replaces the current session. Thanks @mvanhorn (#176, closes #150).\n- **Recommendations**: add a song or an artist to the account's music blacklist from a song's menu, the now-playing page's More menu or an artist page, on macOS and iOS. The daily recommendations' \"Not interested\" is now on iOS too. Thanks @yamakze (#195).\n\n### Fixed\n\n- **Recently Played**: lists the songs you played last, newest first, with when each was played, as the official app does; it used to show the listening ranking by play count, which stays available under Top This Week and Top All Time (#198).\n- **Storage**: the device's used space counts purgeable space as available, matching the system's storage settings (#199).\n\n### Improved\n\n- **macOS**: on Sequoia the sidebar's first item sits where the system sidebar put it, and Back returns to the front of the page title, following the page's edge, with hover and press feedback. Thanks @yamakze (#196).\n- **macOS**: built with the macOS 27.2 SDK, so on macOS 27 the window takes on t",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.33/Kumone-iOS-0.3.33.ipa",
+          "size": 4135139,
+          "minOSVersion": "15.0"
+        },
         {
           "version": "0.3.32",
           "date": "2026-11-09",
@@ -1258,22 +1274,6 @@
           "localizedDescription": "### Added / 新增\n\n- Dock menu (right-click the Dock icon): play/pause, next, previous, shuffle, a repeat submenu, and the last six places playback started from — playlists, albums, artists, daily recommendations, cloud disk, the play-record list, heartbeat mode and personal FM. Picking one reloads it and plays; heartbeat mode and personal FM are regenerated rather than resumed, since neither is a fixed list. Thanks @XerWandeRer (#24).\n- Dock 菜单（右键 Dock 图标）：播放/暂停、下一首、上一首、随机播放、循环模式子菜单，以及最近播放过的 6 个来源——歌单、专辑、歌手、每日推荐、音乐云盘、最近播放、心动模式、私人漫游。点击即重新载入并播放；心动模式与私人漫游会重新生成而非恢复原队列，因为它们本就不是固定歌单。感谢 @XerWandeRer（#24）。\n- Romaji above Japanese lyrics (romaji / original / translation) on the full-screen now-playing lyrics and the side lyrics panel. Netease's hand-checked `romalrc` is used when present, otherwise an offline system transcription fills the gaps; Japanese-only, off by default (Settings → Appearance). Thanks @XerWandeRer (#25).\n- 日文歌词上方显示罗马音（罗马音 / 原文 / 翻译），覆盖全屏播放页大歌词与右侧歌词面板。有网易云人工校对的 `romalrc` 时优先使用，缺失时用系统离线转写兜底；仅日文歌触发，默认关闭（设置 → 外观）。感谢 @XerWandeRer（#25）。\n\n### Fixed / 修复\n\n- macOS: the window no longer grows by the sidebar's width every time the immersive now-playing page is dismissed. The window",
           "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.5/Kumone-iOS-0.3.5.ipa",
           "size": 6691487,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "0.3.4",
-          "date": "2026-08-25",
-          "localizedDescription": "### Fixed / 修复\n\n- Now Playing screen was misaligned on iPhone whenever a track was playing — content and the top-right lyrics button spilled off the right edge. The transport-control row was a fixed-width `HStack`; with the like button present it summed to ~430pt, wider than any iPhone, so it overflowed and stretched the whole layout (and its corner overlays) past the screen edge. Controls now lay out in equal-width slots that fit any device, and the page is pinned to the screen width. (#22)\n- 播放界面在有歌曲播放时于 iPhone 上错位——内容和右上角歌词按钮溢出到屏幕右侧之外。底部控制条原本是固定宽度的 `HStack`，加上「喜欢」按钮后总宽约 430pt、比任何 iPhone 都宽，于是溢出并把整个布局（含四角浮层）撑到屏幕之外。现在控制按钮按等宽均分排布，可适配任意机型，并将页面钉定到屏幕宽度。（#22）",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.4/Kumone-iOS-0.3.4.ipa",
-          "size": 6675490,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "0.3.3",
-          "date": "2026-08-25",
-          "localizedDescription": "### Improved / 改进\n\n- iOS 16–25 glass tab bar rebuilt to match Telegram's Liquid Glass bar 1:1 (studied from telegram-ios `TabBarComponent` / `LiquidLensView`): the selection is a bar-height capsule using Telegram's own faint tint — a subtle darkening in light, a subtle lightening in dark — instead of a bright chip, and unselected items use an 80%-black filled icon + 10pt label. The pill is now **interactive**: drag it and it tracks your finger, switching tabs live and settling with a spring on release; a tap slides it there.\n- iOS 16–25 玻璃 Tab Bar 按 Telegram 的 Liquid Glass 栏 1:1 重制（参照 telegram-ios 的 `TabBarComponent` / `LiquidLensView`）：选中块改为与栏等高的胶囊、采用 Telegram 同款的淡淡着色（浅色下轻微压暗、深色下轻微提亮），不再是过亮的方块；未选中项用 80% 黑的填充图标 + 10pt 文字。选中滑块现在**可交互**：拖动它会跟随手指在标签间滑动、实时切换页面，松手后以弹簧动画归位；点按则滑动过去。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.3/Kumone-iOS-0.3.3.ipa",
-          "size": 6672349,
           "minOSVersion": "15.0"
         }
       ],
