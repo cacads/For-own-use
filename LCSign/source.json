@@ -1289,6 +1289,14 @@
       "category": "影音下载",
       "versions": [
         {
+          "version": "4.6.1",
+          "date": "2026-11-20",
+          "localizedDescription": "# What's New in Mori 4.6.1\r\n\r\n### New Features & Enhancements\r\n\r\n* **Direct iOS Camera Roll Save (#27)**: Added native Photos framework integration (`saveToCameraRoll`) in AppDelegate to save downloaded videos and photos directly to iOS Camera Roll without third-party dialogs.\r\n* **Full Spanish (es) Localization (#30)**: Added complete Spanish language translation across app UI, tools, settings, and documentation.\r\n* **Chinese Share Link Extraction (#26)**: Added parser preserving extraction codes from Chinese cloud drive and media share captions (Quark, UC, Baidu, 115, Lanzou).\r\n* **Multilingual Documentation**: Added localized README and installation guides for Indonesian (`id`), Simplified Chinese (`zh-CN`), and Spanish (`es`) with interactive language switchers.\r\n* **Full i18n Key Synchronization**: Synchronized all 9 locale dictionaries to 630 translation keys and added native Android Indonesian string resources (`values-in`).\r\n\r\n### Bug Fixes & Scraper Repairs\r\n\r\n* **iOS Auto-Zoom on Input Focus (#31)**: Enforced 16px font sizing and locked viewport scale to prevent WebKit auto-zooming when tapping the input or paste bar.\r\n* **Bilibili Akamai 403 & Stream Headers (#31)**: Inj",
+          "downloadURL": "https://github.com/coflyn/Mori/releases/download/v4.6.1/Mori-v4.6.1-iOS-Unsigned.ipa",
+          "size": 2214932,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "4.6.0",
           "date": "2026-11-14",
           "localizedDescription": "# What's New in Mori 4.6.0\r\n\r\n### New Features & Enhancements\r\n\r\n* **Built-in Offline & Online Tools Suite**: Dedicated utility tab featuring a live browser media sniffer (HLS & stream interception with tracker/ad filtering), offline video-to-audio extractor (WAV/MP3 via Web Audio API), client-side image converter & compressor (WebP/JPG/PNG), PDF document compressor, multi-platform username checker (20+ networks), anime scene reverse search (trace.moe), TikTok profile inspector, and shortlink resolver.\r\n* **In-App APK Updater & Direct GitHub Installs**: Direct in-app update flow for Android detecting new GitHub releases, displaying localized changelog popups across 9 languages, and downloading APKs with in-app progress ring and package installer trigger.\r\n* **Platform-Specific iOS Update Routing**: Tailored update modal for iOS detecting platform environment, calculating `.ipa` package size, and routing users directly to `.ipa` browser download or GitHub Release page.\r\n* **Template-Based Filenames & Persistent Counters (#21)**: Custom file naming patterns (`{platform}`, `{date}`, `{time}`, `{quality}`, `{num}`, `{title}`) with monotonic sequential counters per platform.\r\n* **Real-T",
