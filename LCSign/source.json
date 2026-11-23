@@ -1037,6 +1037,14 @@
       "category": "影音下载",
       "versions": [
         {
+          "version": "0.3.38",
+          "date": "2026-11-22",
+          "localizedDescription": "### Added\n\n- **macOS**: an Add to Playlist button next to the heart in the player bar saves the playing song to one of your playlists in one click (#232, thanks @WillowBranch127).\n- **iOS**: a Swipe Left from Lyrics for Comments switch in Settings turns the swipe off for anyone who triggers it by accident; View Comments stays in the now-playing menu (#225).\n\n### Fixed\n\n- **iOS**: skipping to another song now stops the previous one straight away, instead of letting it play on for a few seconds under the new song's title and lyrics (#221).\n- **Now playing**: after a relaunch, the restored song's lyrics load right away instead of spinning until you press play (#219).\n- **macOS 26**: with Liquid Glass, the page no longer covers part of the floating sidebar; a gap now runs between them, also with the window inactive (#229).\n- **macOS**: opening Roam with a song loaded no longer pushes the sidebar up under the window buttons (#227).\n- **macOS**: dragging the desktop lyrics no longer brings a minimized or hidden main window back to the front (#187).\n- **Comments**: shared comment pictures no longer have a thin white line along the bottom.\n\n---\n\n### 新增\n\n- **macOS**：播放条爱心旁新增「收藏到歌单」按钮，一键把正在播",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.38/Kumone-iOS-0.3.38.ipa",
+          "size": 4420454,
+          "minOSVersion": "15.0"
+        },
+        {
           "version": "0.3.37",
           "date": "2026-11-14",
           "localizedDescription": "![分享评论 · Share a comment](https://raw.githubusercontent.com/missuo/kumone/v0.3.37/docs/releases/0.3.37-comment-share.png)\n\n![macOS 播放页评论 · Comments on the macOS now-playing page](https://raw.githubusercontent.com/missuo/kumone/v0.3.37/docs/releases/0.3.37-macos-comments.png)\n\n### Added\n\n- **Comments**: long-press a comment (right-click on macOS) to share it as a picture — the comment and who wrote it, with the song's title, artist and cover, over the cover's colours — then share it or save it to Photos (copy it on macOS). Copy Comment copies its text.\n- **Comments**: on macOS (and iPad), a Lyrics | Comments switch above the now-playing lyrics shows the playing song's comments in their place; songs without lyrics but with comments now get the column too.\n\n### Fixed\n\n- **iOS 17**: tapping the mini player no longer freezes the app with the now-playing page never appearing; the cause has been found and fixed. Swiping from the lyrics to the comments is back on iOS 16/17 (#213).\n- **Now playing**: on iPhone, the volume panel now closes when you tap anywhere else on the page, not only the speaker button again.\n\n---\n\n### 新增\n\n- **评论**：长按一条评论（macOS 上右键）即可把它分享成一张图片：评论内容和评论者，配上歌名、歌手和专辑封面，底色取自封",
@@ -1266,14 +1274,6 @@
           "localizedDescription": "### Added / 新增\n\n- Settings → 更新: a \"启动时自动检查更新\" toggle. Off suppresses the launch update sheet on iOS and disables Sparkle's scheduled checks on macOS; manual check still works. (#42)\n- 设置 → 更新：新增「启动时自动检查更新」开关。关闭后 iOS 启动不再自动弹更新提示、macOS 停用 Sparkle 定时检查；仍可手动检查。（#42）\n\n### Fixed / 修复\n\n- macOS: clicking the Dock icon reopens the main window after it was closed (e.g. while desktop lyrics keeps the app running). Thanks @kitiho (#34, fixes #30).\n- macOS：主窗口关闭后（例如桌面歌词让 App 常驻时）点击 Dock 图标可重新打开主窗口。感谢 @kitiho（#34，修复 #30）。\n- iOS #31: the bottom mini-player text no longer turns white/unreadable after entering search — the accessory's colour scheme is pinned to the app appearance.\n- iOS #31：进入搜索后底部迷你播放条文字不再变白看不清——已把该控件的配色方案固定为 App 外观。\n- iOS #37: the volume slider in the now-playing page works again — a nested GeometryReader was silently swallowing the drag.\n- iOS #37：播放页的音量滑轨恢复可用——此前一个嵌套的 GeometryReader 把拖动吞掉了。\n- 最近播放（最近一周）now records plays: the client was sending only the `play` weblog and never the `startplay` one that writes the recent-plays list. Thanks @fanyuexiang for the root cause (#33).\n- 最近播放（最近一周）现在能记录了：客户端此前只发了 `play` 打卡、从未发写入「最近播放」列表的 `startplay`。感谢 @fanyuexiang 的根因分析（#33）。\n- Gray-tra",
           "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.9/Kumone-iOS-0.3.9.ipa",
           "size": 6851148,
-          "minOSVersion": "15.0"
-        },
-        {
-          "version": "0.3.8",
-          "date": "2026-08-26",
-          "localizedDescription": "### Fixed / 修复\n\n- macOS / iPad: after opening a card from the Home page (每日推荐, a playlist, album or artist), the sidebar looked stuck — tapping another section did nothing until you pressed Back. Those cards used closure-based `NavigationLink`s, whose pushes live in the stack's internal state rather than the bound `NavigationPath`, so the sidebar's path reset couldn't pop them (and an `.id()` reset does not work inside `NavigationSplitView` — verified on device). The Home cards now use value-based navigation, which the existing sidebar-switch reset clears correctly. (#29)\n- macOS / iPad：从推荐页打开卡片（每日推荐、歌单、专辑、歌手）后，侧边栏看起来卡住——点其他分区没反应，必须先点返回。这些卡片用的是闭包式 `NavigationLink`，其压栈存在于导航栈内部状态、而非绑定的 `NavigationPath`，所以侧边栏的 path 重置弹不掉它们（而 `.id()` 重置在 `NavigationSplitView` 里无效——已在真机验证）。推荐页卡片改为值驱动导航，配合现有的侧边栏切换重置即可正确清空。（#29）",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.8/Kumone-iOS-0.3.8.ipa",
-          "size": 6844573,
           "minOSVersion": "15.0"
         }
       ],
