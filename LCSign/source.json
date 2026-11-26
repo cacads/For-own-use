@@ -1009,11 +1009,11 @@
           "minOSVersion": "15.0"
         },
         {
-          "version": "2.1.2_b129",
-          "date": "2022-02-11",
-          "localizedDescription": "1. fix: Blank screen when receiving empty galleries array.\r\n2. fix: The confirmation dialog presents twice sometimes.\r\n3. fix: Some events not getting handled when the app becomes active.\r\n4. fix: The username text field prevent using the Chinese keyboard. @EthanChinCN\r\n5. refactor: Tweak the the detail list cell a little bit.\r\n6. refactor: Hide the keyboard after tapping login button.\r\n7. refactor: Replace literal browsing country with localized version.",
-          "downloadURL": "https://github.com/EhPanda-Team/EhPanda/releases/download/v2.1.2_b129/EhPanda.ipa",
-          "size": 8964935,
+          "version": "3.1.0",
+          "date": "2026-11-26",
+          "localizedDescription": "EhPanda 3.1.0 beta includes the following improvements.\n\n- Tags you keep in My Tags are marked in every list and on gallery pages. Add or remove a tag from its menu, and manage your tag sets in Settings.\n- Webtoons can always be read vertically. Turn it on in Reading settings, and EhPanda switches when a gallery's pages are tall.\n- Waiting downloads are listed in the order they will run, and each gallery's menu can download it now, next or at another place in the queue.\n- The Read button shows the page you will resume at and how far you've read. Lists mark the galleries you've favorited and strike through the date of an expunged gallery. Each E-Hentai setting saves on its own, the Sort Order menu in Favorites shows the order in use, and editing a comment keeps its formatting.\n- Save a search keyword as a saved search, and get tag suggestions in the saved search editor. Crash reports are sent, with personal details removed, so crashes can be fixed. Plus pointer hover effects on iPad and many fixes.",
+          "downloadURL": "https://github.com/EhPanda-Team/EhPanda/releases/download/3.1.0/EhPanda-Beta.ipa",
+          "size": 20832997,
           "minOSVersion": "15.0"
         }
       ],
